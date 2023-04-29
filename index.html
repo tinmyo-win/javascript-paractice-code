@@ -1,0 +1,24 @@
+<h1>check in console</h1>
+
+<script>
+  let people = [
+    { name: "Alex" },
+    { name: "Bob", gender: "M" },
+    { name: "Tom", gender: "m" },
+    { name: "Mary", gender: "F" },
+  ];
+
+  people.map(p => {
+    if(p.gender === "M" || p.gender === "m"){
+      p.gender = "Male"
+    }
+    else if(p.gender === "F" || p.gender === "f"){
+      p.gender = "Female"
+    }
+    else{
+      p.gender = "Unknown"
+    }
+  
+  })
+  console.log(people)
+</script>

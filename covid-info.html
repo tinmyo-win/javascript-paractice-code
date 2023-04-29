@@ -1,0 +1,24 @@
+<script>
+
+  /*
+  fetch("https://api.covid19api.com/summary")
+    .then(res => res.json())
+    .then(data => {
+      const allCountries = data.Countries;
+      const myanmar = allCountries.filter(c => c.Country === "Myanmar")
+      console.log(myanmar)
+    })
+
+    */
+  async function covidInfo() {
+    const res = await fetch("https://api.covid19api.com/summary")
+
+    const data = await res.json();
+    console.log(data)
+    const allCountries = data.Countries;
+    const myanmar = allCountries.find(c => c.Country === "Myanmar");
+    console.log(myanmar);
+  }
+
+covidInfo();
+</script>

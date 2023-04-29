@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Click Event</title>
+  </head>
+  <body>
+    <div id="note">Hello, World!</div>
+    <button>Toggle</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+      $("button").click(function () {
+        $("#note").slideToggle("fast");
+      });
+    </script>
+  </body>
+</html>
